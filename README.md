@@ -1,14 +1,23 @@
 # SLCSP Calculator
 
-This program parses a series of CSV files containing data on health plans, and determines the second-lowest cost silver-level plan for a series of input zip codes. Details can be found here: https://homework.adhoc.team/slcsp.
+This Golang program parses a series of CSV files containing data on health plans, and determines the second-lowest cost silver-level plan for a series of input zip codes. Details can be found here: https://homework.adhoc.team/slcsp.
 
 # Installation and Use
 
+On a machine with Go installed (this program uses version 1.13), cd to the directory where you want to install the program and perform the following steps:
 
+- `git clone https://github.com/eoconnor/slcsp_calculator.git`
+- `cd slcsp_calculator`
+- `go install`
+- `slcsp_calculator`
+
+The program will run and the output will be written to the terminal window. There will be a series of logging statements, followed by the line `*** OUTPUT:`, followed by the CSV-formatted output.
 
 # Implementation Notes
 
-This program uses the Golang CSV parsing library (https://golang.org/pkg/encoding/csv/), which supports the CSV format described in RFC 4180.
+All application logic is contained in the file `slcsp_calculator.go`. The file `slcsp_calculator_test.go` contains some unit tests. The input CSV-formatted data files are located in the `data` directory.
+
+The program uses the Golang CSV parsing library (https://golang.org/pkg/encoding/csv/), which supports the CSV format described in RFC 4180.
 
 # To Do's
 
